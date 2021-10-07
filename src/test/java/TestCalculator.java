@@ -6,4 +6,11 @@ public class TestCalculator {
      public void test_sum_normal_case() {
       Assertions.assertEquals(4, Calculator.sum(3, 1));
     }
+
+
+
+    @Test
+    public void test_division_by_zero() {
+        Assertions.assertThrows(ArithmeticException.class, ()-> Calculator.divide(5, 0));
+    }
 }
